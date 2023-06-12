@@ -36,6 +36,6 @@ public class MeasurementService {
     }
 
     public Integer getRainyDaysCount() {
-        return (int)findAll().stream().filter(Measurement::isRaining).count();
+        return (int)findAll().stream().filter(Measurement::getRaining).count();
     }
 }

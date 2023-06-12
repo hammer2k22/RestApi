@@ -9,27 +9,27 @@ public class MeasurementDTO {
     @Min(value = -100, message = "Температура не может быть ниже -100")
     @Max(value = 100, message = "Температура не может быть выше 100")
     @NotNull(message = "Значение не может быть пустым")
-    double value;
+    Double value;
 
     @NotNull(message = "Значение не может быть пустым")
-    boolean raining;
+    Boolean raining;
 
     @NotNull(message = "Значение не может быть пустым")
     SensorDTO sensor;
 
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
-    public boolean isRaining() {
+    public Boolean getRaining() {
         return raining;
     }
 
-    public void setRaining(boolean raining) {
+    public void setRaining(Boolean raining) {
         this.raining = raining;
     }
 

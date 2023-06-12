@@ -20,10 +20,10 @@ public class Measurement implements Serializable {
     @NotNull(message = "Значение не может быть пустым")
     @Min(value = -100, message = "Температура не может быть ниже -100")
     @Max(value = 100, message = "Температура не может быть выше 100")
-    private double value;
+    private Double value;
 
     @NotNull(message = "Значение не может быть пустым")
-    private boolean raining;
+    private Boolean raining;
 
     @Column(name = "time")
     @Temporal(TemporalType.TIMESTAMP)
@@ -36,7 +36,7 @@ public class Measurement implements Serializable {
     public Measurement() {
     }
 
-    public Measurement(double value, boolean raining, Date measurementTime, Sensor sensor) {
+    public Measurement(Double value, Boolean raining, Date measurementTime, Sensor sensor) {
         this.value = value;
         this.raining = raining;
         this.measurementTime = measurementTime;
@@ -51,19 +51,19 @@ public class Measurement implements Serializable {
         this.id = id;
     }
 
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
-    public boolean isRaining() {
+    public Boolean getRaining() {
         return raining;
     }
 
-    public void setRaining(boolean raining) {
+    public void setRaining(Boolean raining) {
         this.raining = raining;
     }
 
